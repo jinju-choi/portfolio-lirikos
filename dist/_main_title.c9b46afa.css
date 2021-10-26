@@ -1,0 +1,248 @@
+@charset "UTF-8";
+body,
+a,
+input {
+  font-family: "Dosis", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+
+.hide {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.clear_fix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.h_font {
+  letter-spacing: 10px;
+  font-size: 60px;
+  color: #333;
+}
+
+a.more {
+  margin-top: 50px;
+  color: #007a88;
+  position: relative;
+  width: 170px;
+}
+a.more::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #007a88;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 20px);
+  right: -40px;
+  transition: 0.5s;
+}
+a.more:hover::after {
+  transform: scale(1.1);
+}
+a.more:hover span {
+  animation-name: more;
+  animation-duration: 0.5s;
+}
+a.more span {
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: #007a88;
+  position: absolute;
+  top: calc(50% - 0.5px);
+  right: 0;
+  transition: 0.5s;
+}
+a.more span::before {
+  content: "→";
+  position: absolute;
+  top: -10px;
+  right: -17px;
+  color: #fff;
+  z-index: 2;
+}
+@keyframes more {
+  30% {
+    right: -50px;
+  }
+  50% {
+    opacity: 0;
+    right: 20px;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+.slide_count {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 60px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translate(50%, -50%);
+}
+.slide_count button {
+  background: transparent;
+  border: none;
+  width: 100%;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.slide_count button::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background: #333;
+}
+.slide_count button.left::after {
+  content: "←";
+  left: 0;
+  top: 0;
+  font-size: 20px;
+  position: absolute;
+  font-weight: 400;
+}
+.slide_count button.right::after {
+  content: "→";
+  right: 0;
+  top: 0;
+  font-size: 20px;
+  position: absolute;
+  font-weight: 400;
+}
+.slide_count span {
+  display: block;
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: 300;
+}
+
+body {
+  position: relative;
+}
+
+/* TITLE */
+#title {
+  height: calc(100vh - 120px);
+  position: relative;
+}
+#title .wrap {
+  height: 100%;
+  width: 90%;
+  position: relative;
+}
+#title .title_slide {
+  width: calc(100% * 2);
+  height: 100%;
+}
+#title .title_slide li {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 100px;
+  box-sizing: border-box;
+  position: absolute;
+}
+#title .title_slide li:nth-child(1) {
+  background-image: url("/main_visual_01.893d2b9e.jpg");
+}
+#title .title_slide li:nth-child(2) {
+  background-image: url("/main_visual_02.8a917b92.jpg");
+}
+#title .title_slide li a {
+  margin-top: 50px;
+}
+#title .title_slide h3 {
+  font-size: 60px;
+  letter-spacing: 12px;
+  font-weight: 200;
+  line-height: 1.3;
+  color: #333;
+  margin-bottom: 30px;
+}
+#title .title_slide p {
+  font-weight: 200;
+}
+#title .slide_btn {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+#title .slide_btn ul {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+#title .slide_btn ul li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#title .slide_btn ul li::before {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+#title .slide_btn ul li.active {
+  border: 1px solid #fff;
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+#title .slide_btn button {
+  display: block;
+  border: none;
+  background: transparent;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 0;
+}
+#title .slide_btn button::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #ccc;
+  display: block;
+  color: #fff;
+  font-size: 10px;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/*# sourceMappingURL=/_main_title.c9b46afa.css.map */

@@ -1,0 +1,219 @@
+@media (max-width: 1600px) {
+  header .inner {
+    padding: 40px 50px;
+  }
+  header .inner h1 {
+    transform: scale(1.1);
+  }
+
+  .h_font {
+    font-size: 40px !important;
+  }
+
+  #best_sellers .inner {
+    max-width: 1200px;
+  }
+
+  footer .inner {
+    max-width: 1200px;
+  }
+
+  .scroll_top {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 1200px) {
+  header .inner {
+    padding: 20px 50px;
+  }
+  header .inner h1 {
+    transform: scale(1);
+  }
+
+  #title h3 {
+    font-size: 46px !important;
+  }
+
+  #best_sellers ul {
+    gap: 70px;
+  }
+  #best_sellers ul li {
+    padding: unset;
+  }
+  #best_sellers h3 {
+    font-size: 20px !important;
+  }
+
+  #brand_story div {
+    height: 560px;
+  }
+  #brand_story div video {
+    width: auto;
+    height: auto;
+  }
+  #brand_story h2 {
+    font-size: 90px;
+    top: 50px;
+  }
+  #brand_story h3 {
+    font-size: 30px !important;
+  }
+
+  #experience .inner {
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+  }
+  #experience .inner h2 {
+    width: 100%;
+    display: block;
+  }
+  #experience .inner h2 span {
+    display: inline-block;
+  }
+  #experience .inner ul {
+    width: 100%;
+  }
+  #experience .inner ul li {
+    justify-content: center !important;
+  }
+  #experience .inner ul li span.wrap {
+    padding-right: 100px;
+    width: 50%;
+  }
+  #experience .inner ul li img {
+    height: 85% !important;
+  }
+
+  footer .inner {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 798px) {
+  .h_font {
+    font-size: 30px !important;
+  }
+
+  #title {
+    height: 450px;
+  }
+  #title .title_slide li {
+    padding-left: 40px !important;
+  }
+  #title .title_slide li h3 {
+    font-size: 36px !important;
+  }
+  #title .title_slide li a.more::after {
+    width: 30px;
+    height: 30px;
+  }
+  #title .slide_count {
+    width: 50px;
+    height: 120px;
+  }
+  #title .slide_count span {
+    font-size: 26px;
+  }
+
+  #best_sellers .inner {
+    padding: 80px 50px;
+  }
+  #best_sellers .inner h2 {
+    margin-bottom: 0;
+  }
+  #best_sellers .inner ul {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 34px;
+    margin-top: 60px !important;
+  }
+  #best_sellers .inner ul li:nth-child(2) {
+    margin-top: unset;
+  }
+  #best_sellers .inner ul li:nth-child(5) {
+    margin-top: unset;
+  }
+  #best_sellers .inner ul li h3 {
+    font-size: 16px !important;
+    text-align: center;
+  }
+
+  #brand_story h2 {
+    display: none;
+  }
+  #brand_story video {
+    transform: translate(-40%, -10%);
+  }
+  #brand_story .brand_slide {
+    width: calc(100% * 3) !important;
+  }
+  #brand_story .brand_slide li {
+    width: 100%;
+    padding: 0 50px !important;
+  }
+  #brand_story .brand_slide_btn {
+    width: 70% !important;
+    padding-left: 50px !important;
+  }
+
+  #brand_material {
+    height: 900px !important;
+  }
+  #brand_material::before {
+    background-size: 140%;
+    top: 81%;
+  }
+  #brand_material::after {
+    top: 55%;
+    background-size: 70%;
+  }
+  #brand_material .wrap {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  #brand_material .wrap div {
+    width: 100%;
+  }
+  #brand_material .wrap div.scent {
+    margin-bottom: 50px;
+  }
+  #brand_material .wrap div.scent a::before {
+    background-size: 40%;
+    height: 180px !important;
+  }
+  #brand_material .wrap div.ingredients {
+    background-size: 50%;
+    height: 250px !important;
+  }
+  #brand_material .wrap div.ingredients a::before {
+    background-size: 40%;
+    height: 250px !important;
+  }
+  #brand_material .wrap div h3 {
+    font-size: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  #experience .inner {
+    height: auto;
+  }
+  #experience .inner ul li {
+    flex-direction: column;
+    justify-content: inherit;
+  }
+  #experience .inner ul li img {
+    width: 50%;
+    height: auto !important;
+    margin-right: initial;
+  }
+  #experience .inner ul li span.wrap {
+    padding-right: initial;
+    width: 100%;
+  }
+  #experience .inner .slide_count {
+    transform: translate(-100%, -100%);
+  }
+}
+
+/*# sourceMappingURL=/_main_media.32245f2e.css.map */
