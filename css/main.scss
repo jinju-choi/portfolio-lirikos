@@ -36,6 +36,7 @@ $maxwidth: 1500px;
       box-sizing: border-box;
       margin-top: 130px;
       li {
+        
         padding: 0 30px;
         &:nth-child(2){
           margin-top: -150px;
@@ -44,10 +45,24 @@ $maxwidth: 1500px;
           margin-top: -150px;
         }
         a{
+          position: relative;
+          display: block;
           color: #333;
         }
         img {
           width: 100%;
+          transition: opacity 0.5s;
+          &.hover--img {
+            position: absolute;
+            top: 16px;
+            left: 0;
+            opacity: 0;
+          }
+        }
+        &:hover {
+          .hover--img{
+            opacity: 1;
+          }
         }
         h3 {
           font-size: 30px;

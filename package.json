@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch --source-map-urls=relative ./css/main.scss ./style.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
-    "sass": "^1.36.0"
+    "sass": "^1.43.4"
   }
 }

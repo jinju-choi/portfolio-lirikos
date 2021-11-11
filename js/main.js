@@ -4,7 +4,7 @@ searchBoxOpen();
 fixedHeader();
 scrollTopBtn();
 siteSelect();
-sellerImgChange();
+// sellerImgChange();
 //dotClickSlide();
 
 window.onscroll = function () {
@@ -32,6 +32,8 @@ new Swiper('#title .swiper-container', {
     nextEl: '#title .swiper-button-next',
     prevEl: '#title .swiper-button-prev',
   },
+  observer: true,
+  observeParents: true,
 });
 
 //nav slide
@@ -42,6 +44,8 @@ new Swiper('.nav_slide.swiper-container', {
     el: '.nav_slide .swiper-pagination',
     clickable: true,
   },
+  observer: true,
+  observeParents: true,
 });
 
 //brand srory slide
@@ -51,7 +55,9 @@ new Swiper('#brand_story .swiper-container', {
   pagination: {
     el: '#brand_story .swiper-pagination',
     clickable: true,
-  }
+  },
+  observer: true,
+  observeParents: true,
 });
 
 // experience slide 
@@ -62,6 +68,8 @@ new Swiper('#experience .swiper-container', {
     nextEl: '#experience .swiper-button-next',
     prevEl: '#experience .swiper-button-prev',
   },
+  observer: true,
+  observeParents: true,
 });
 
 //brand_material 버블 애니메이션
@@ -180,26 +188,26 @@ function siteSelect() {
 
 }
 
-function sellerImgChange() {
-  let bestSeller = document.getElementById("best_sellers");
-  let sellerList = bestSeller.getElementsByTagName("li");
+// function sellerImgChange() {
+//   let bestSeller = document.getElementById("best_sellers");
+//   let sellerList = bestSeller.getElementsByTagName("li");
 
-  let hover = "hover";
-  let no = "";
-  Array.from(sellerList).forEach(function (element, index) {
-    element.addEventListener("mouseenter", function () {
-      let img = element.getElementsByTagName("img")[0];
-      let getSrc = img.src;
-      let ch_img = getSrc.replace("img", hover);
+//   let hover = "hover";
+//   let no = "";
+//   Array.from(sellerList).forEach(function (element, index) {
+//     element.addEventListener("mouseenter", function () {
+//       let img = element.getElementsByTagName("img")[0];
+//       let getSrc = img.src;
+//       let ch_img = getSrc.replace("img", hover);
 
-      //let hov = ch_img.replace("http://localhost:1234", no);
-      //img.src = hov;
-      let ch = document.createElement('img');
-      element.appendChild(ch);
-      element.children[0].setAttribute("src", ch_img);
-    })
-  });
-}
+//       //let hov = ch_img.replace("http://localhost:1234", no);
+//       //img.src = hov;
+//       let ch = document.createElement('img');
+//       element.appendChild(ch);
+//       element.children[0].setAttribute("src", ch_img);
+//     })
+//   });
+// }
 
 
 let title = document.getElementById("title");

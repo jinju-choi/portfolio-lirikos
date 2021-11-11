@@ -122,8 +122,8 @@ siteMapOpen();
 searchBoxOpen();
 fixedHeader();
 scrollTopBtn();
-siteSelect();
-sellerImgChange(); //dotClickSlide();
+siteSelect(); // sellerImgChange();
+//dotClickSlide();
 
 window.onscroll = function () {
   var winTop = Math.floor(window.scrollY || document.documentElement.scrollTop);
@@ -148,7 +148,9 @@ new Swiper('#title .swiper-container', {
   navigation: {
     nextEl: '#title .swiper-button-next',
     prevEl: '#title .swiper-button-prev'
-  }
+  },
+  observer: true,
+  observeParents: true
 }); //nav slide
 
 new Swiper('.nav_slide.swiper-container', {
@@ -157,7 +159,9 @@ new Swiper('.nav_slide.swiper-container', {
   pagination: {
     el: '.nav_slide .swiper-pagination',
     clickable: true
-  }
+  },
+  observer: true,
+  observeParents: true
 }); //brand srory slide
 
 new Swiper('#brand_story .swiper-container', {
@@ -166,7 +170,9 @@ new Swiper('#brand_story .swiper-container', {
   pagination: {
     el: '#brand_story .swiper-pagination',
     clickable: true
-  }
+  },
+  observer: true,
+  observeParents: true
 }); // experience slide 
 
 new Swiper('#experience .swiper-container', {
@@ -175,7 +181,9 @@ new Swiper('#experience .swiper-container', {
   navigation: {
     nextEl: '#experience .swiper-button-next',
     prevEl: '#experience .swiper-button-prev'
-  }
+  },
+  observer: true,
+  observeParents: true
 }); //brand_material 버블 애니메이션
 
 var bubble = document.getElementsByClassName("bubble");
@@ -290,26 +298,25 @@ function siteSelect() {
   siteBtn.addEventListener("click", function () {
     siteBtn.classList.toggle("current");
   });
-}
+} // function sellerImgChange() {
+//   let bestSeller = document.getElementById("best_sellers");
+//   let sellerList = bestSeller.getElementsByTagName("li");
+//   let hover = "hover";
+//   let no = "";
+//   Array.from(sellerList).forEach(function (element, index) {
+//     element.addEventListener("mouseenter", function () {
+//       let img = element.getElementsByTagName("img")[0];
+//       let getSrc = img.src;
+//       let ch_img = getSrc.replace("img", hover);
+//       //let hov = ch_img.replace("http://localhost:1234", no);
+//       //img.src = hov;
+//       let ch = document.createElement('img');
+//       element.appendChild(ch);
+//       element.children[0].setAttribute("src", ch_img);
+//     })
+//   });
+// }
 
-function sellerImgChange() {
-  var bestSeller = document.getElementById("best_sellers");
-  var sellerList = bestSeller.getElementsByTagName("li");
-  var hover = "hover";
-  var no = "";
-  Array.from(sellerList).forEach(function (element, index) {
-    element.addEventListener("mouseenter", function () {
-      var img = element.getElementsByTagName("img")[0];
-      var getSrc = img.src;
-      var ch_img = getSrc.replace("img", hover); //let hov = ch_img.replace("http://localhost:1234", no);
-      //img.src = hov;
-
-      var ch = document.createElement('img');
-      element.appendChild(ch);
-      element.children[0].setAttribute("src", ch_img);
-    });
-  });
-}
 
 var title = document.getElementById("title");
 var nextBtn = title.getElementsByClassName("right")[0];
@@ -404,7 +411,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63539" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61711" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

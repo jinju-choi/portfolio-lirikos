@@ -337,19 +337,19 @@ nav .nav_slide ul.slide li {
 }
 nav .nav_slide ul.slide li:nth-child(1) {
   background-color: #bae4e9;
-  background-image: url("/facial-eraser-cleansing-oil-foam-hover.f3c9b77b.jpg");
+  background-image: url("../img/facial-eraser-cleansing-oil-foam-hover.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
 nav .nav_slide ul.slide li:nth-child(2) {
   background-color: #e2cbe3;
-  background-image: url("/true-ampoule-mask-hover.2932a514.jpg");
+  background-image: url("../img/true-ampoule-mask-hover.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
 nav .nav_slide ul.slide li:nth-child(3) {
   background-color: #bcb7d4;
-  background-image: url("/deep-sea-waterfall-cream-hover.f245c10a.jpg");
+  background-image: url("../img/deep-sea-waterfall-cream-hover.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -408,7 +408,7 @@ nav .nav_slide .swiper-pagination span.swiper-pagination-bullet-active {
 
 footer {
   position: relative;
-  background-image: url("/footer-background.88b680b3.jpg");
+  background-image: url("../img/footer-background.jpg");
   height: 230px;
 }
 footer::before {
@@ -416,7 +416,7 @@ footer::before {
   display: block;
   width: 100%;
   height: 210px;
-  background-image: url("/footer-layer-01.9588eec3.png");
+  background-image: url("../img/footer-layer-01.png");
   position: absolute;
   top: -210px;
 }
@@ -425,7 +425,7 @@ footer::after {
   display: block;
   width: 100%;
   height: 210px;
-  background-image: url("/footer-layer-02.1f31219f.png");
+  background-image: url("../img/footer-layer-02.png");
   position: absolute;
   top: -210px;
   z-index: -1;
@@ -1040,10 +1040,10 @@ a.more span::before {
     background-position-x: 90%;
   }
   #title .swiper-wrapper .swiper-slide:first-child::before {
-    background-image: url("/main_visual_01.893d2b9e.jpg");
+    background-image: url("../img/main_visual_01.jpg");
   }
   #title .swiper-wrapper .swiper-slide:last-child::before {
-    background-image: url("/main_visual_02.8a917b92.jpg");
+    background-image: url("../img/main_visual_02.jpg");
   }
   #title .swiper-wrapper .swiper-slide h3 {
     font-size: 28px !important;
@@ -1270,10 +1270,10 @@ a.more span::before {
   transition: 0.5s;
 }
 #title .swiper-wrapper .swiper-slide:nth-child(1) {
-  background-image: url("/main_visual_01.893d2b9e.jpg");
+  background-image: url("../img/main_visual_01.jpg");
 }
 #title .swiper-wrapper .swiper-slide:nth-child(2) {
-  background-image: url("/main_visual_02.8a917b92.jpg");
+  background-image: url("../img/main_visual_02.jpg");
 }
 #title .swiper-wrapper .swiper-slide h3 {
   font-size: 60px;
@@ -1366,7 +1366,7 @@ a.more span::before {
 }
 #best_sellers::after {
   content: "";
-  background-image: url("/lirikos-illust-04.4ceb0270.png");
+  background-image: url("../img/lirikos-illust-04.png");
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 100%;
@@ -1405,22 +1405,10 @@ a.more span::before {
   margin-top: -150px;
 }
 #best_sellers .inner ul li a {
-  position: relative;
-  display: block;
   color: #333;
 }
 #best_sellers .inner ul li img {
   width: 100%;
-  transition: opacity 0.5s;
-}
-#best_sellers .inner ul li img.hover--img {
-  position: absolute;
-  top: 16px;
-  left: 0;
-  opacity: 0;
-}
-#best_sellers .inner ul li:hover .hover--img {
-  opacity: 1;
 }
 #best_sellers .inner ul li h3 {
   font-size: 30px;
@@ -1596,7 +1584,7 @@ a.more span::before {
   height: 50%;
   position: absolute;
   bottom: -200px;
-  background-image: url("/main-experience-layer-01.03c2db77.png");
+  background-image: url("../img/main-experience-layer-01.png");
   background-repeat: no-repeat;
   z-index: 1;
 }
@@ -1607,7 +1595,7 @@ a.more span::before {
   height: 50%;
   position: absolute;
   bottom: 0;
-  background-image: url("/main-material-layer-03.4a743aa3.png");
+  background-image: url("../img/main-material-layer-03.png");
   background-repeat: no-repeat;
   background-position: right;
   background-size: 51%;
@@ -1624,10 +1612,10 @@ a.more span::before {
   width: 45%;
 }
 #brand_material .wrap div.scent a::before {
-  background-image: url("/main-material-design.3dd62633.png");
+  background-image: url("../img/main-material-design.png");
 }
 #brand_material .wrap div.ingredients a::before {
-  background-image: url("/main-material-ingredients.3c3ecfc6.png");
+  background-image: url("../img/main-material-ingredients.png");
 }
 #brand_material .wrap div a {
   color: #fff;
@@ -1814,4 +1802,4 @@ a.more span::before {
   transform: rotate(180deg);
 }
 
-/*# sourceMappingURL=/main.54166fbf.css.map */
+/*# sourceMappingURL=style.css.map */
