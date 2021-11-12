@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -149,7 +149,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/main.scss":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/main.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\img\\facial-eraser-cleansing-oil-foam-hover.jpg":[["facial-eraser-cleansing-oil-foam-hover.f3c9b77b.jpg","img/facial-eraser-cleansing-oil-foam-hover.jpg"],"img/facial-eraser-cleansing-oil-foam-hover.jpg"],"./..\\img\\true-ampoule-mask-hover.jpg":[["true-ampoule-mask-hover.2932a514.jpg","img/true-ampoule-mask-hover.jpg"],"img/true-ampoule-mask-hover.jpg"],"./..\\img\\deep-sea-waterfall-cream-hover.jpg":[["deep-sea-waterfall-cream-hover.f245c10a.jpg","img/deep-sea-waterfall-cream-hover.jpg"],"img/deep-sea-waterfall-cream-hover.jpg"],"./..\\img\\footer-background.jpg":[["footer-background.88b680b3.jpg","img/footer-background.jpg"],"img/footer-background.jpg"],"./..\\img\\footer-layer-01.png":[["footer-layer-01.9588eec3.png","img/footer-layer-01.png"],"img/footer-layer-01.png"],"./..\\img\\footer-layer-02.png":[["footer-layer-02.1f31219f.png","img/footer-layer-02.png"],"img/footer-layer-02.png"],"./..\\img\\main_visual_01.jpg":[["main_visual_01.893d2b9e.jpg","img/main_visual_01.jpg"],"img/main_visual_01.jpg"],"./..\\img\\main_visual_02.jpg":[["main_visual_02.8a917b92.jpg","img/main_visual_02.jpg"],"img/main_visual_02.jpg"],"./..\\img\\lirikos-illust-04.png":[["lirikos-illust-04.4ceb0270.png","img/lirikos-illust-04.png"],"img/lirikos-illust-04.png"],"./..\\img\\main-experience-layer-01.png":[["main-experience-layer-01.03c2db77.png","img/main-experience-layer-01.png"],"img/main-experience-layer-01.png"],"./..\\img\\main-material-layer-03.png":[["main-material-layer-03.4a743aa3.png","img/main-material-layer-03.png"],"img/main-material-layer-03.png"],"./..\\img\\main-material-design.png":[["main-material-design.3dd62633.png","img/main-material-design.png"],"img/main-material-design.png"],"./..\\img\\main-material-ingredients.png":[["main-material-ingredients.3c3ecfc6.png","img/main-material-ingredients.png"],"img/main-material-ingredients.png"],"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\img\\facial-eraser-cleansing-oil-foam-hover.jpg":[["facial-eraser-cleansing-oil-foam-hover.f3c9b77b.jpg","img/facial-eraser-cleansing-oil-foam-hover.jpg"],"img/facial-eraser-cleansing-oil-foam-hover.jpg"],"./..\\img\\true-ampoule-mask-hover.jpg":[["true-ampoule-mask-hover.2932a514.jpg","img/true-ampoule-mask-hover.jpg"],"img/true-ampoule-mask-hover.jpg"],"./..\\img\\deep-sea-waterfall-cream-hover.jpg":[["deep-sea-waterfall-cream-hover.f245c10a.jpg","img/deep-sea-waterfall-cream-hover.jpg"],"img/deep-sea-waterfall-cream-hover.jpg"],"./..\\img\\footer-background.jpg":[["footer-background.88b680b3.jpg","img/footer-background.jpg"],"img/footer-background.jpg"],"./..\\img\\footer-layer-01.png":[["footer-layer-01.9588eec3.png","img/footer-layer-01.png"],"img/footer-layer-01.png"],"./..\\img\\footer-layer-02.png":[["footer-layer-02.1f31219f.png","img/footer-layer-02.png"],"img/footer-layer-02.png"],"./..\\img\\main_visual_01.jpg":[["main_visual_01.893d2b9e.jpg","img/main_visual_01.jpg"],"img/main_visual_01.jpg"],"./..\\img\\main_visual_02.jpg":[["main_visual_02.8a917b92.jpg","img/main_visual_02.jpg"],"img/main_visual_02.jpg"],"./..\\img\\lirikos-illust-04.png":[["lirikos-illust-04.4ceb0270.png","img/lirikos-illust-04.png"],"img/lirikos-illust-04.png"],"./..\\img\\main-experience-layer-01.png":[["main-experience-layer-01.03c2db77.png","img/main-experience-layer-01.png"],"img/main-experience-layer-01.png"],"./..\\img\\main-material-layer-03.png":[["main-material-layer-03.4a743aa3.png","img/main-material-layer-03.png"],"img/main-material-layer-03.png"],"./..\\img\\main-material-design.png":[["main-material-design.3dd62633.png","img/main-material-design.png"],"img/main-material-design.png"],"./..\\img\\main-material-ingredients.png":[["main-material-ingredients.3c3ecfc6.png","img/main-material-ingredients.png"],"img/main-material-ingredients.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61711" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59066" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -393,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
 //# sourceMappingURL=/main.54166fbf.js.map
