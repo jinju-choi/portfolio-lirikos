@@ -4,21 +4,14 @@ searchBoxOpen();
 fixedHeader();
 scrollTopBtn();
 siteSelect();
-// sellerImgChange();
-//dotClickSlide();
 
 window.onscroll = function () {
   let winTop = Math.floor(window.scrollY || document.documentElement.scrollTop);
   fixedHeader(winTop);
   scrollTopBtn(winTop);
-  //brandTitleMove(winTop);
-  //console.log(winTop);
-  //wheelMove();
   wheelScoll(winTop);
 }
 
-setInterval(bubleAni, 2000);
-//setInterval(slide, 500);
 
 //title slide 
 new Swiper('#title .swiper-container', {
@@ -71,6 +64,7 @@ new Swiper('#experience .swiper-container', {
   observer: true,
   observeParents: true,
 });
+
 
 //brand_material 버블 애니메이션
 let bubble = document.getElementsByClassName("bubble");
@@ -210,23 +204,23 @@ function siteSelect() {
 // }
 
 
-let title = document.getElementById("title");
-let nextBtn = title.getElementsByClassName("right")[0];
-let prevBtn = title.getElementsByClassName("left")[0];
-let slideCount = title.getElementsByClassName("slide_count")[0];
-let slideBtn = slideCount.getElementsByTagName("button");
-let title_dot = title.getElementsByClassName("slide_btn")[0].getElementsByTagName("li");
-let dot = title_dot.length;
-let slideList = document.getElementsByClassName("title_slide")[0].children;
-let currentIndex = 0;
-let num = 0;
-nextBtn.addEventListener("click", function () {
-  if (currentIndex == dot) {
-    currentIndex + 1;
-  } else {
-    currentIndex - 1;
-  }
-});
+// let title = document.getElementById("title");
+// let nextBtn = title.getElementsByClassName("right")[0];
+// let prevBtn = title.getElementsByClassName("left")[0];
+// let slideCount = title.getElementsByClassName("slide_count")[0];
+// let slideBtn = slideCount.getElementsByTagName("button");
+// let title_dot = title.getElementsByClassName("slide_btn")[0].getElementsByTagName("li");
+// let dot = title_dot.length;
+// let slideList = document.getElementsByClassName("title_slide")[0].children;
+// let currentIndex = 0;
+// let num = 0;
+// nextBtn.addEventListener("click", function () {
+//   if (currentIndex == dot) {
+//     currentIndex + 1;
+//   } else {
+//     currentIndex - 1;
+//   }
+// });
 
 
 
@@ -257,21 +251,21 @@ function wheelMove(e) {
 
 var prevPosition = 0; // 스크롤방향
 
-function wheelScoll(wiT){
-  initPosition = wiT;
+// function wheelScoll(wiT){
+//   initPosition = wiT;
 
-  if(wiT >= brandTop && wiT <= brandTop + winHeight){
-    if(initPosition > prevPosition){// 스크롤방향
-       delta = -12;
-       brandstorySlide -= delta;// 스크롤방향n
-       brandTitle.style.right = `${brandstorySlide}px`;
-    }else{
-       delta=+12;
-       brandstorySlide -= delta;// 스크롤방향n
-       brandTitle.style.right = `${brandstorySlide}px`;
-    }
-    prevPosition = initPosition;
-  }
-  console.log(brandstorySlide);
-}
+//   if(wiT >= brandTop && wiT <= brandTop + winHeight){
+//     if(initPosition > prevPosition){// 스크롤방향
+//        delta = -12;
+//        brandstorySlide -= delta;// 스크롤방향n
+//        brandTitle.style.right = `${brandstorySlide}px`;
+//     }else{
+//        delta=+12;
+//        brandstorySlide -= delta;// 스크롤방향n
+//        brandTitle.style.right = `${brandstorySlide}px`;
+//     }
+//     prevPosition = initPosition;
+//   }
+//   console.log(brandstorySlide);
+// }
 
