@@ -5,14 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch --source-map-urls=relative ./css/main.scss ./style.css",
     "build": "parcel main.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinju-choi/portfolio-lirikos.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jinju-choi/portfolio-lirikos/issues"
+  },
+  "homepage": "https://github.com/jinju-choi/portfolio-lirikos#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
     "sass": "^1.43.4"
   }
 }
