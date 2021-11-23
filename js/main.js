@@ -5,12 +5,13 @@ fixedHeader();
 scrollTopBtn();
 siteSelect();
 
-window.onscroll = function () {
-  let winTop = Math.floor(window.scrollY || document.documentElement.scrollTop);
-  fixedHeader(winTop);
-  scrollTopBtn(winTop);
-  wheelScoll(winTop);
-}
+window.addEventListener('scroll', function(){
+  let windowTop = Math.floor(window.scrollY || document.documentElement.scrollTop);
+  fixedHeader(windowTop);
+  scrollTopBtn(windowTop);
+  brandTitleMoveSection(windowTop)
+  // WheelingBrandTitleMove(windowTop);
+});
 
 
 //title slide 
@@ -75,25 +76,25 @@ let random2;
 
 let bubleAni = function(){
   let count = bubble.length;
-  if(count >= 12){
+  if(count >= 13){
     while (bubbleBox.lastChild) {
       bubbleBox.removeChild(bubbleBox.lastChild);
     }
   } else{
     for(let i = 0; i < bubbleBox.length; i++){
-      let clone = bubble[0].cloneNode();
-      random = Math.floor(Math.random()*100)+1;
-      random2 = Math.floor(Math.random()*200+Math.random()*10);
+      let bubbleCoby = bubble[0].cloneNode();
+      random = Math.floor(Math.random()*100) + 1;
+      random2 = Math.floor(Math.random()*200 + Math.random()*10);
 
-      bubbleBox[i].appendChild(clone);
+      bubbleBox[i].appendChild(bubbleCoby);
 
       bubble[i].style.transform = `translateY(${random2}px)`;
       bubble[i].style.left = `${random}%`;
-
     }
   }
-
 }
+setInterval(bubleAni, 1000);
+
 
 //스크롤시 header 배경변경
 function fixedHeader(win) {
@@ -182,90 +183,37 @@ function siteSelect() {
 
 }
 
-// function sellerImgChange() {
-//   let bestSeller = document.getElementById("best_sellers");
-//   let sellerList = bestSeller.getElementsByTagName("li");
-
-//   let hover = "hover";
-//   let no = "";
-//   Array.from(sellerList).forEach(function (element, index) {
-//     element.addEventListener("mouseenter", function () {
-//       let img = element.getElementsByTagName("img")[0];
-//       let getSrc = img.src;
-//       let ch_img = getSrc.replace("img", hover);
-
-//       //let hov = ch_img.replace("http://localhost:1234", no);
-//       //img.src = hov;
-//       let ch = document.createElement('img');
-//       element.appendChild(ch);
-//       element.children[0].setAttribute("src", ch_img);
-//     })
-//   });
-// }
-
-
-// let title = document.getElementById("title");
-// let nextBtn = title.getElementsByClassName("right")[0];
-// let prevBtn = title.getElementsByClassName("left")[0];
-// let slideCount = title.getElementsByClassName("slide_count")[0];
-// let slideBtn = slideCount.getElementsByTagName("button");
-// let title_dot = title.getElementsByClassName("slide_btn")[0].getElementsByTagName("li");
-// let dot = title_dot.length;
-// let slideList = document.getElementsByClassName("title_slide")[0].children;
-// let currentIndex = 0;
-// let num = 0;
-// nextBtn.addEventListener("click", function () {
-//   if (currentIndex == dot) {
-//     currentIndex + 1;
-//   } else {
-//     currentIndex - 1;
-//   }
-// });
-
-
-
+//remove class function
 function reset(content, className) {
   Array.from(content).forEach(element => {
     element.classList.remove(className);
   });
 }
 
-let brandStory = document.getElementById("brand_story");
-let brandTop = Math.floor(brandStory.offsetTop);
-let brandTitle = brandStory.getElementsByTagName('h2')[0];
-let body = document.body;
-let html = document.documentElement;
-let winHeight = Math.max(body.scrollHeight, body.offsetHeight,
-  html.clientHeight, html.scrollHeight, html.offsetHeight);
-let brandstorySlide = 0;
-brandTop = brandTop - winHeight;
-console.log('Height:' + winHeight);
-console.log('brandTop:' + brandTop);
 
-document.addEventListener("wheel", wheelMove, false);
+//Brand story mouse wheel event
+const brandTitle = document.querySelector('.brand-story-title');
+let size = 1;
 
-function wheelMove(e) {
-  e.preventDefault();
-  let delta = e.detail *2;
+function WheelingBrandTitleMove(event) {
+  event.preventDefault();
+  console.log(event.deltaY)
+  size += event.deltaY * -1;
+
+  size = Math.min(Math.max(-500, size), 100);
+  brandTitle.style.transform = `translateX(${size}px)`;
 }
 
-var prevPosition = 0; // 스크롤방향
+function brandTitleMoveSection(winTop) {
+  let brandTop = document.getElementById('brand_story').offsetTop;
+  let brandHeight = document.getElementById('brand_story').offsetHeight;
+  brandTop = brandTop - (brandTop/4);
+  console.log(brandTop);
+  if(winTop >= brandTop && winTop < winTop + brandHeight) {
+    WheelingBrandTitleMove();
+  }
+}
+window.addEventListener('wheel', WheelingBrandTitleMove, true);
 
-// function wheelScoll(wiT){
-//   initPosition = wiT;
 
-//   if(wiT >= brandTop && wiT <= brandTop + winHeight){
-//     if(initPosition > prevPosition){// 스크롤방향
-//        delta = -12;
-//        brandstorySlide -= delta;// 스크롤방향n
-//        brandTitle.style.right = `${brandstorySlide}px`;
-//     }else{
-//        delta=+12;
-//        brandstorySlide -= delta;// 스크롤방향n
-//        brandTitle.style.right = `${brandstorySlide}px`;
-//     }
-//     prevPosition = initPosition;
-//   }
-//   console.log(brandstorySlide);
-// }
 
